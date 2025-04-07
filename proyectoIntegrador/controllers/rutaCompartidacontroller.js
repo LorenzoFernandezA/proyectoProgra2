@@ -1,12 +1,12 @@
 const rutaCompartidaController={
     register:function(req,res){
-        res.render('rutaCompartidaRegister', { });
+        res.render('register', { });
     },
     login:function(req,res){
-        res.render('rutaCompartidaLogin', { });
+        res.render('login', { });
     },
     add:function(req,res){
-        res.render('rutaCompartidaAdd', { });
+        res.render('product-add', { });
     }
 }
 
