@@ -5,9 +5,7 @@ const rutaCompartidaController={
     login:function(req,res){
         res.render('login', { });
     },
-    add:function(req,res){
-        res.render('product-add', { });
-    }
+    
 }
 
 module.exports = rutaCompartidaController
