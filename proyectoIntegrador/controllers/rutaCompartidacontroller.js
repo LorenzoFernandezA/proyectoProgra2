@@ -9,3 +9,5 @@ const rutaCompartidaController={
         res.render('rutaCompartidaAdd', { });
     }
 }
+
+module.exports = rutaCompartidaController
