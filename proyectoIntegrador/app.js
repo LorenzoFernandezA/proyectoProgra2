@@ -10,7 +10,7 @@ var productRouter = require('./routes/product')
 var profileRouter = require(`./routes/profile`)
 var registerRouter = require(`./routes/register`)
 var loginRouter = require(`./routes/login`)
-var productAdd  = require(`./routes/product-add`)'"'
+var productAdd  = require(`./routes/product-add`)
 
 var app = express();
 
