@@ -6,9 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var productRouter = require('./routes/product')
-var profileRouter = require(`./routes/profile`)
-var rutaCompartidarouter = require(`./routes/rutaCompartida`)
+var productRouter = require('./routes/product');
+var profileRouter = require(`./routes/profile`);
+var rutaCompartidarouter = require(`./routes/rutaCompartida`);
 
 var app = express();
 
@@ -23,10 +23,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);nodemon
-app.use('/', productRouter)
-app.use(`/`,profileRouter)
-app.use(`/`,rutaCompartidarouter)
+app.use('/', usersRouter);
+app.use('/', productRouter);
+app.use(`/`,profileRouter);
+app.use(`/`,rutaCompartidarouter);
 
 
 // catch 404 and forward to error handler

@@ -1,4 +1,4 @@
-const rutaCompartidaController={
+const rutaCompartidacontroller={
     register:function(req,res){
         res.render('register', { });
     },
@@ -8,4 +8,4 @@ const rutaCompartidaController={
     
 }
 
-module.exports = rutaCompartidaController
+module.exports = rutaCompartidacontroller
