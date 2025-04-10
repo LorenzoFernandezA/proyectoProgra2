@@ -27,7 +27,7 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= usuario.nombre %> 
+					<h1 class="main-title"><%= info.nombre %> 
 						<a href="profile-edit.html">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -35,11 +35,11 @@
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
-					<p>Email: <%= usuario.email %></p>
+					<p>Email: <%= info.email %></p>
 					<ul class="">
-						<li><%= usuario.productos %> productos</li>
-						<li><%= usuario.seguidores %> seguidores</li>
-						<li><%= usuario.comentarios %> comentarios</li>
+						<li><%= info.productos %> productos</li>
+						<li><%= info.seguidores %> seguidores</li>
+						<li><%= info.comentarios %> comentarios</li>
 					</ul>
 				</div>
 			</div>
@@ -56,9 +56,9 @@
 			<!-- Show mis productos -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
+							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>
@@ -70,22 +70,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -100,7 +85,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -115,7 +100,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -130,7 +115,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -145,7 +130,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -160,7 +145,22 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
+					<a href="/productos/detalle">
+						<figure class="product-box_image">
+							<img src="/images/products/default-image.png" alt="cafetera moulinex">
+						</figure>
+						<article class="product-box_data">
+							<h2>Nombre del producto</h2>
+							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+								delectus ex</p>
+							<p>Comentarios: 12</p>
+						</article>
+					</a>
+				</section>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="/productos/detalle">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
