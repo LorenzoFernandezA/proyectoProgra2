@@ -4,7 +4,7 @@ const db = {
       id: 1,
       nombre: "Lorenzo",
       apellido: "Fernandez",
-      email: "",
+      email: "lolito@yahoo.com",
       fotoPerfil: ""
     },
   
