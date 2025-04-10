@@ -121,5 +121,5 @@ const db = {
     ]
   };
   
-module.exports = router
+module.exports = db;
   

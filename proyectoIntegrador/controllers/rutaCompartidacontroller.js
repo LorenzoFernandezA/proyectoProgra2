@@ -8,4 +8,4 @@ const rutaCompartidacontroller={
     
 }
 
-module.exports = rutaCompartidacontroller
+module.exports = rutaCompartidacontroller;

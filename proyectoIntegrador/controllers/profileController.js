@@ -1,12 +1,11 @@
-const usuario = require('..db/modulo')
+const usuario = require('../db/modulo')
+info = usuario.usuario
 
 const profileController = {
+
+
     profile: function(req, res) {
-        const infoUser = usuario.usuario;
-        res.render('profile', { 
-            title: 'Mi Perfil',
-            usuario: infoUser 
-        });
+        res.render('profile', {info});
     }
 }
 
