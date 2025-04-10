@@ -3,9 +3,11 @@ const db = {
     usuario: {
       id: 1,
       nombre: "Lorenzo",
-      apellido: "Fernandez",
-      email: "",
-      fotoPerfil: ""
+      productos: 8,
+      seguidores: 200,
+      comentarios: 300,
+      email: "lorenzo@ejemplo.com",
+      fotoPerfil: "/images/users/default-avatar.jpg"
     },
   
     productos: [
@@ -16,7 +18,24 @@ const db = {
         precio: 15000,
         imagen: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
         stock: 10,
-        categoria: "Sol"
+        categoria: "Sol",
+        comentarios: [
+            {
+                usuario: "María García",
+                imagen: "/images/users/user1.jpg",
+                texto: "Excelente producto, estoy muy contento con mi compra"
+            },
+            {
+                usuario: "Carlos Rodríguez",
+                imagen: "/images/users/user2.jpg",
+                texto: "Muy lindos, ideal para la playa"
+            },
+            {
+                usuario: "Laura Martínez",
+                imagen: "/images/users/user3.jpg",
+                texto: "Lo recomiendo, muy buena relación calidad-precio"
+            }
+        ]
       },
       {
         id: 2,
