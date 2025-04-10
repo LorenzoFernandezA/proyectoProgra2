@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var rutaCompartidaController = require('../controllers/rutaCompartidaController');
+var rutaCompartidacontroller = require('../controllers/rutaCompartidacontroller');
 
-router.get('/register', rutaCompartidaController.register);
-router.get('/login', rutaCompartidaController.login);
+router.get('/register', rutaCompartidacontroller.register);
+router.get('/login', rutaCompartidacontroller.login);
 
 
 module.exports = router;
