@@ -533,4 +533,10 @@ textarea.form-input {
   font-size:x-large;
   font-weight: bold;
   color: #3030cd;
+  font-family: 'Raleway', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6, title, .main-title{
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
