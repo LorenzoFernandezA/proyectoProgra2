@@ -540,3 +540,19 @@ h1, h2, h3, h4, h5, h6, title, .main-title{
   font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 400;
   font-style: normal;}
+
+  body{
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+  }
+
+  a{
+    font-weight: bold;
+    text-decoration:underline;
+    color: #009ffd;
+  }
+  header, footer {
+    background-color: #2a2a72;
+    color: white;
+  }
