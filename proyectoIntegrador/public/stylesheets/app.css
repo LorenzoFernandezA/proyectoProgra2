@@ -528,3 +528,9 @@ textarea.form-input {
     margin: auto;
   }
 }
+
+.nombrePag{
+  font-size:x-large;
+  font-weight: bold;
+  color: #3030cd;
+}
