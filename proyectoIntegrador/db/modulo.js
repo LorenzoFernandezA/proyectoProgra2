@@ -32,7 +32,7 @@ const db = {
             },
             {
                 usuario: "Laura Martínez",
-                imagen: "/images/users/user3.jpg",
+                imagen: "/images/users/default-image.png",
                 texto: "Lo recomiendo, muy buena relación calidad-precio"
             }
         ]
@@ -58,7 +58,7 @@ const db = {
           },
           {
               usuario: "Lautuaro Martínez",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, muy buena relación calidad-precio"
           }]
       },
@@ -83,7 +83,7 @@ const db = {
           },
           {
               usuario: "Ludovico Ortelli",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, muy buena relación calidad-precio"
           }]
       },
@@ -108,7 +108,7 @@ const db = {
           },
           {
               usuario: "Mriko Novak",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Muy comodos y practicos"
           }]
       },
@@ -133,7 +133,7 @@ const db = {
           },
           {
               usuario: "Sol Martinez",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, muy buena relación calidad-precio"
           }]
       },
@@ -158,7 +158,7 @@ const db = {
           },
           {
               usuario: "Franco Blanco",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Me vinieron barbaro"
           }]
       },
@@ -183,7 +183,7 @@ const db = {
           },
           {
               usuario: "Jose Dugan",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, muy buena relación calidad-precio"
           }]
       },
@@ -208,7 +208,7 @@ const db = {
           },
           {
               usuario: "Gustavo Cerrati",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, muy buena relación calidad-precio"
           }]
       },
@@ -233,7 +233,7 @@ const db = {
           },
           {
               usuario: "Serena Williams",
-              imagen: "/images/users/user3.jpg",
+              imagen: "/images/users/default-image.png",
               texto: "Lo recomiendo, me sirven mucho"
           }]
       },
@@ -258,7 +258,7 @@ const db = {
           },
           {
               usuario: "Lisa Simpson",
-              imagen: "/images/users/user3.jpg",
+              imagen: "//images/users/default-image.png",
               texto: "Lo recomiendo, son livianos en serio. Es perfecto para que pueda leer las partituras. "
           }]
       }
