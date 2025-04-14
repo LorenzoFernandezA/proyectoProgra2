@@ -561,8 +561,9 @@ header, footer {
 
 footer ul li{
   display: flex;
-  align-items: center;
-  justify-content:space-between;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
   margin: 0 10px;
-  
+
 }
