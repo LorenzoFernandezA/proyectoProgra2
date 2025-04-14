@@ -558,3 +558,15 @@ header, footer {
   background-color: #0f172a; 
   color: white;
 }
+
+footer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 60px;  font-size: 1.2em;
+ font-weight: bold;
+ color: #ffffff; 
+ text-align: center;
+ padding: 10px;
+
+}
