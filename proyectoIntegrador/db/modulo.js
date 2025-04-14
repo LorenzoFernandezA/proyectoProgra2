@@ -7,7 +7,7 @@ const db = {
       seguidores: 200,
       comentarios: 300,
       email: "lorenzo@ejemplo.com",
-      fotoPerfil: "/images/users/default-avatar.jpg"
+      fotoPerfil: "/images/users/pepa.webp",
     },
   
     productos: [
