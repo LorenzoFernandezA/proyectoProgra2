@@ -19,6 +19,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
         stock: 10,
         categoria: "Sol",
+        cantComentarios: 3,
         comentarios: [
             {
                 usuario: "María García",
@@ -45,6 +46,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1608471575900-56e09f43a9f4",
         stock: 8,
         categoria: "Lectura",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Hector Gerardo",
@@ -70,6 +72,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1582089001071-6c6f77b5f38b",
         stock: 12,
         categoria: "Moda", 
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Ulises García",
@@ -95,6 +98,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1555529771-35a38a9d3f5b",
         stock: 6,
         categoria: "Deporte",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Barber1324",
@@ -120,6 +124,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1588854337118-4c4d121a9d8e",
         stock: 15,
         categoria: "Sol",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Federico Ovejero",
@@ -145,6 +150,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1592878849128-c4e7536be4a3",
         stock: 20,
         categoria: "Tecnología",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Federico Alvarez",
@@ -170,6 +176,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1557779935-25114dd7fa8b",
         stock: 9,
         categoria: "Moda",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Fernando Gorrini",
@@ -195,6 +202,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1523475496153-3d6ccf8c38e3",
         stock: 7,
         categoria: "Lectura",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Guillermo Coppola",
@@ -220,6 +228,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1593032465171-c9bb52ef8d6b",
         stock: 11,
         categoria: "Sol",
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Donald Trump",
@@ -245,6 +254,7 @@ const db = {
         imagen: "https://images.unsplash.com/photo-1592878892586-84a3a4e5cc26",
         stock: 13,
         categoria: "General", 
+        cantComentarios: 3,
         comentarios: [
           {
               usuario: "Bart Simpson",
