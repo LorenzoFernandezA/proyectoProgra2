@@ -1,5 +1,5 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@600&display=swap');
 
 
 /*====== Variables ======*/
@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family:'Poppins', sans-serif;
   font-weight: 300;
   background-color: #f8fafc;
   color: #2C2C2C;
@@ -71,11 +71,14 @@ hr {
 .main-header {
   padding: 15px 0;
   background-color:#6ED3F3;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-header_credit-link {
@@ -139,6 +142,7 @@ hr {
   border: 0px;
   cursor: pointer;
   font-size: 1em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .logout:hover{
@@ -161,6 +165,10 @@ hr {
   background-size: cover;
   background-position: center center;
   height: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+.data{
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -174,6 +182,7 @@ hr {
   font-size: 2.4em;
   font-weight: 400;
   color: var(--gray);
+  font-family: 'Poppins', sans-serif;
 }
 
 .product-box {
@@ -239,6 +248,7 @@ hr {
   justify-content: center;
   align-items: center;
   transition: 300ms;
+  font-family: 'Poppins', sans-serif;
 }
 
 .noproducts {
@@ -264,6 +274,7 @@ hr {
   background-color: #ffffff;
   padding: 20px 0;
   margin-top: 80px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .footer-data {
@@ -279,26 +290,37 @@ hr {
   color: var(--gray);
   font-size: 2.4em;
   font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 .footer-data p {
   color: var(--gray);
   font-size: 1.5em;
   font-weight: 300;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 .sub-footer {
   border-top: 1px solid var(--light-gray);
   background-color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+
 }
 
 .sub-footer p {
   margin: 0;
   color: var(--gray);
   padding: 15px 0;
+  font-family: 'Nunito', sans-serif;
+
 }
 
+.nombres{
+  font-family: 'Poppins', sans-serif;
 
+}
 /*====== Product Detail ======*/
 .product-detail {
   background-color: #ffffff;
@@ -327,6 +349,7 @@ hr {
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
   line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
 }
 
 .product-detail-price {
@@ -535,13 +558,17 @@ textarea.form-input {
   font-size: x-large;
   font-weight: bold;
   color: #2C2C2C; 
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+
 }
 
 h1, h2, h3, h4, h5, h6, title, .main-title {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 body {
