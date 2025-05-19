@@ -9,6 +9,7 @@ var productRouter = require('./routes/product');
 var profileRouter = require(`./routes/profile`);
 var rutaCompartidarouter = require(`./routes/rutaCompartida`);
 
+const session = require('express-session');
 
 var app = express();
 
@@ -26,6 +27,11 @@ app.use('/', indexRouter);
 app.use('/productos', productRouter);
 app.use(`/`,profileRouter);
 app.use(`/`,rutaCompartidarouter);
+app.use(session({
+  secret: "Nuestro mensaje secreto",
+  resave: false,
+  saveUninitialized: true
+}));
 
 
 // catch 404 and forward to error handler
