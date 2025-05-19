@@ -14,7 +14,10 @@ const rutaCompartidacontroller={
         const usuario = req.body.usuario;
         const email = req.body.email;
         const password = req.body.password;
-        db.index.findeOne({where:{email}
+
+        let passworEncriptada=bcrypt.hashSync(password,10);
+
+        db.user.findeOne({where:{email}
         }).then(function(resultado){
             if(resultado){
                 return res.send("El usuario ya existe")
@@ -25,8 +28,13 @@ const rutaCompartidacontroller={
             }
         
         })
-    }
-    
-}
+            db.user.create({
+            name: usuario,
+            email: email,
+            password: passworEncriptada
+            }
+         )}
+        }
+
 
 module.exports = rutaCompartidacontroller;
