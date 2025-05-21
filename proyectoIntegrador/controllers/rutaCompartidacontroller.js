@@ -36,5 +36,11 @@ const rutaCompartidacontroller={
          )}
         }
 
+    logout:function(req,res){
+        req.session.destroy();
+        res.clearCookie('nombre de la cookie');
+         return res.redirect('/login');
+        }
+
 
 module.exports = rutaCompartidacontroller;
