@@ -4,11 +4,17 @@ let bcrypt = require ('bcryptjs');
 
 
 const rutaCompartidacontroller={
-    register:function(req,res){
-        res.render('register', { });
-    },
     login:function(req,res){
-        res.render('login', { });
+        const email = req.body.email;
+        const password = req.body.password;
+
+        db.user.findOne({where:{email}
+        }).then(function(resultado){
+            if(resultado==null){
+                return res.send("El usuario no existe")
+            }else{return res.redirect("/")}
+
+        })
     },
     create:function(req,res){
         const usuario = req.body.usuario;
@@ -33,14 +39,14 @@ const rutaCompartidacontroller={
             email: email,
             password: passworEncriptada
             }
-         )}
-        }
+         )},
+        
 
     logout:function(req,res){
         req.session.destroy();
         res.clearCookie('nombre de la cookie');
          return res.redirect('/login');
         }
-
+    }
 
 module.exports = rutaCompartidacontroller;

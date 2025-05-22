@@ -17,10 +17,7 @@ const db = {
         descripcion: "Estilo vintage, lentes oscuros, marco negro.",
         precio: 15000,
         imagen: "/images/Adeportivos.webp",
-        stock: 10,
-        categoria: "Sol",
-        cantComentarios: 3,
-        comentarios: [
+        stock: 10},
           {
             usuario: "Federico Ovejero",
             imagen: "/images/users/pepa.webp",
@@ -35,9 +32,7 @@ const db = {
             usuario: "Sol Martinez",
             imagen: "/images/users/pepa.webp",
             texto: "Lo recomiendo, muy buena relación calidad-precio"
-        }
-        ]
-      },
+        },
       {
         id: 2,
         nombre: "Anteojos rectangulares de lectura",
@@ -77,12 +72,12 @@ const db = {
           {
             usuario: "Federico Ovejero",
             imagen: "/images/users/pepa.webp",
-            texto: "EL polarizado increible"
+            texto: "EL polarizado increible",
         },
         {
             usuario: "Fran Mamuska",
             imagen: "/images/users/pepa.webp",
-            texto: "Son de otro planeta"
+            texto: "Son de otro planeta",
         },
         {
             usuario: "Sol Martinez",
