@@ -12,15 +12,30 @@ const userController = {
 
     login:function(req,res){
             const email = req.body.email;
-            const password = req.body.password;
+         
+            const recordarme = req.body.recordarme
     
             db.user.findOne({where:{email}
             }).then(function(resultado){
-                if(resultado==null){
-                    return res.send("El usuario no existe")
-                }else{return res.redirect("/")}
-    
+                if (resultado == null){
+                    return res.send("El usuario no existe");
+                }
+        
+                let chek = bcrypt.compareSync(req.body.password, resultado.password);
+                console.log(chek);
+                if(chek){
+                    req.session.userLogged = resultado
+                    res.redirect("/")
+                } else {
+                    res.send("La contraseña no coincide");
+                }
             })
+           
+                if(recordarme){
+                    res.cookie("recordar", 'recordarme',{maxAge: 1000 * 60 * 5})
+                }
+            
+
     },
         create:function(req,res){
             const usuario = req.body.usuario;
