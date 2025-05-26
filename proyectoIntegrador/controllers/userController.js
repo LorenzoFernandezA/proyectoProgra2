@@ -24,6 +24,7 @@ const userController = {
                 let chek = bcrypt.compareSync(req.body.password, resultado.password);
                 console.log(chek);
                 if(chek){
+
                     req.session.userLogged = resultado
                     res.redirect("/")
                 } else {
@@ -68,8 +69,8 @@ const userController = {
     
         logout:function(req,res){
             req.session.destroy();
-            res.clearCookie('nombre de la cookie');
-             return res.redirect('/login');
+            res.clearCookie('recordarme');
+             return res.redirect('/');
             }
         }
 

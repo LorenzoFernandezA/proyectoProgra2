@@ -29,6 +29,12 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(function(req,res,next){
+  if(req.session.userLogged){
+    read.locals.userLogged = req.session.userLogged;
+  }
+})
+
 
 app.use('/', indexRouter);
 app.use('/productos', productRouter);

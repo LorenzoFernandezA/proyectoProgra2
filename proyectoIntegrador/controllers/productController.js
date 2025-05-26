@@ -11,6 +11,7 @@ const productController = {
         res.render('product-add', {});
     },
     buscar: function (req, res) {
+        
         res.render('search-results', {producto: dato.productos});
     }
 }

@@ -16,7 +16,11 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include("./partials/header") %>
+	 <% if (local.user){%>
+	<%- include('./partials/headerLogueado.ejs')%>
+<%}else{%>
+<%- include("./partials/header") %>
+<%} %>
 	<!-- /Header -->
 	
 	<!-- Banner -->
