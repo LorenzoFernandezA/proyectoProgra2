@@ -9,7 +9,9 @@ const userController = {
     profile: function(req, res) {
         res.render('profile', {info, producto});
     },
-
+    formLogin: function(req, res) {
+        res.render('login', {info, producto});
+    },
     login:function(req,res){
             const email = req.body.email;
          
@@ -38,8 +40,11 @@ const userController = {
             
 
     },
+
+        register: function(req, res) {
+            res.render('register', {info, producto});
+        },
         create:function(req,res){
-            const usuario = req.body.usuario;
             const email = req.body.email;
             const password = req.body.password;
     
@@ -50,7 +55,7 @@ const userController = {
                 if(resultado){
                     return res.send("El usuario ya existe")
                 }else if (resultado == null){
-                    return res.send("El usuario no existe")
+                    return res.send("Compelta el campo")
     
                 }else if (password.length < 3){
                     return res.send('Contraseña debe tener mas de 3 caracteres')

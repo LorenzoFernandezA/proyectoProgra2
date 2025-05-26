@@ -33,6 +33,8 @@ app.use(function(req,res,next){
   if(req.session.userLogged){
     read.locals.userLogged = req.session.userLogged;
   }
+
+  return next();
 })
 
 
