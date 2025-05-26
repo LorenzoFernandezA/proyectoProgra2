@@ -17,7 +17,10 @@ const db = {
         descripcion: "Estilo vintage, lentes oscuros, marco negro.",
         precio: 15000,
         imagen: "/images/Adeportivos.webp",
-        stock: 10},
+        stock: 10,
+        categoria: "Lectura",
+        cantComentarios: 3,
+        comentarios: [
           {
             usuario: "Federico Ovejero",
             imagen: "/images/users/pepa.webp",
@@ -32,7 +35,8 @@ const db = {
             usuario: "Sol Martinez",
             imagen: "/images/users/pepa.webp",
             texto: "Lo recomiendo, muy buena relación calidad-precio"
-        },
+        }],
+      },
       {
         id: 2,
         nombre: "Anteojos rectangulares de lectura",

@@ -6,8 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var productRouter = require('./routes/product');
-var profileRouter = require(`./routes/profile`);
-var rutaCompartidarouter = require(`./routes/rutaCompartida`);
+
+var userRouter = require(`./routes/Users`);
 
 const session = require('express-session');
 
@@ -23,16 +23,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/productos', productRouter);
-app.use(`/`,profileRouter);
-app.use(`/`,rutaCompartidarouter);
 app.use(session({
   secret: "Nuestro mensaje secreto",
   resave: false,
   saveUninitialized: true
 }));
 
+
+app.use('/', indexRouter);
+app.use('/productos', productRouter);
+
+app.use(`/users`,userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
