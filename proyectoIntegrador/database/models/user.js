@@ -14,9 +14,6 @@ module.exports = function(sequelize, DataTypes){
         },
         password: {
             type: DataTypes.STRING
-        },
-        image: {
-            type: DataTypes.STRING(50)
         }
     };
     let config = {
