@@ -29,7 +29,8 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			 <% if (producto.length >0) { %>
+			<%= console.log(producto); %> 
+			<% if (producto.length >0) { %>
 			  
 			<% for( let i = 0; i < producto.length; i++ ) { %>
 
@@ -37,7 +38,7 @@
 					<section class="product-box">
 						<a href="/productos/detalle">
 							<figure class="product-box_image">
-								<img src="<%- producto[i].imagen %>" >
+								<img src="<%- producto[i].nombreArchivoFoto %>" >
 							</figure>
 							<article class="product-box_data">
 								<h2><%= producto[i].nombre %></h2>
@@ -48,9 +49,9 @@
 					</section>
 				</div>
 				<% } %>
-				<% }else {
+				<% }else { %>
 					<p>No hay resultados para su criterio de búsqueda</p>
-				} %>
+				<%} %>
 			
 
 

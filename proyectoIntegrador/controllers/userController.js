@@ -18,7 +18,7 @@ const userController = {
     },
 
     login:function(req,res){
-            const mail = req.body.email;
+            const mail = req.body.gmail;
             const recordarme = req.body.recordarme;
     
             db.User.findOne({where:{mail}
@@ -47,13 +47,13 @@ const userController = {
     },
         
     create:function(req,res){
-        const mail = req.body.email;
+        const mail = req.body.gmail;
         const password = req.body.password;
         const usuario = req.body.usario;
     
         let passworEncriptada=bcrypt.hashSync(password,10);
     
-        db.User.findOne({where:{mail}
+        db.User.findOne({where:{email:mail}
         }).then(function(resultado){
             if(resultado){
                 return res.send("El usuario ya existe")

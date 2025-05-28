@@ -1,5 +1,6 @@
 create schema base;
 USE base;
+
 CREATE TABLE usuarios(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 mail VARCHAR(50) NOT NULL UNIQUE,
@@ -35,17 +36,17 @@ deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
 FOREIGN KEY (idUsuario) REFERENCES usuarios(id)
 );
 
-INSERT INTO usuarios (mail, contrasena, fecha, documento, foto) VALUES
-("lorenzo@ejemplo.com", "1234", '2000-01-01', 12345678, "/images/users/pepa.webp"),
-("camila@ejemplo.com", "abcd", '1999-05-10', 23456789, "/images/users/pepa.webp"),
-("mateo@ejemplo.com", "5678", '1998-07-21', 34567890, "/images/users/pepa.webp"),
-("valentina@ejemplo.com", "qwerty", '2001-02-15', 45678901, "/images/users/pepa.webp"),
-("tomas@ejemplo.com", "pass123", '2002-12-25', 56789012, "/images/users/pepa.webp"),
-("julieta@ejemplo.com", "clave", '2000-06-18', 67890123, "/images/users/pepa.webp"),
-("lucia@ejemplo.com", "lucia1", '2003-04-09', 78901234, "/images/users/pepa.webp"),
-("ignacio@ejemplo.com", "nacho", '1997-11-30', 89012345, "/images/users/pepa.webp"),
-("martina@ejemplo.com", "marti", '1996-03-20', 90123456, "/images/users/pepa.webp"),
-("sofia@ejemplo.com", "sofi", '2001-08-12', 12341234, "/images/users/pepa.webp");
+INSERT INTO usuarios (mail, contrasena, fecha) VALUES
+("lorenzo@ejemplo.com", "1234", '2000-01-01'),
+("camila@ejemplo.com", "abcd", '1999-05-10'),
+("mateo@ejemplo.com", "5678", '1998-07-21'),
+("valentina@ejemplo.com", "qwerty", '2001-02-15'),
+("tomas@ejemplo.com", "pass123", '2002-12-25'),
+("julieta@ejemplo.com", "clave", '2000-06-18'),
+("lucia@ejemplo.com", "lucia1", '2003-04-09'),
+("ignacio@ejemplo.com", "nacho", '1997-11-30'),
+("martina@ejemplo.com", "marti", '1996-03-20'),
+("sofia@ejemplo.com", "sofi", '2001-08-12');
 
 INSERT INTO productos (idUsuario, nombreArchivoFoto, nombre, descripcion)
 VALUES (1, "Adeportivos.webp", "Anteojos de sol clásicos", "Estilo vintage, lentes oscuros, marco negro.");
