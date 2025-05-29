@@ -9,7 +9,13 @@ const productController = {
             producto: producto,
     })},
         
-    
+    showFormAdd: function (req, res) {
+        if (!req.session.user) {
+            return res.redirect('/users/login');
+        }
+        return res.render('product-add');
+    },
+
     add: function (req, res) {
         res.render('product-add', {});
     },
@@ -38,6 +44,23 @@ const productController = {
         }else if(productNew.descripcion == ""){
             return res.send("Debe agregar una descripcion sobre el producto agregado");
         }
+
+        const nuevoProducto = {
+            imagen: productNew.imagen,
+            nombre: productNew.nombre,
+            descripcion: productNew.descripcion,
+            usuarioId: req.session.user.id 
+        };
+
+        productosDatabase.create(nuevoProducto)
+        .then(function() {
+                return res.redirect('/products');
+            })
+            .catch(function(error) {
+                console.log(error);
+                return res.send('Error al crear el producto');
+            });
+
         }
     
 }
