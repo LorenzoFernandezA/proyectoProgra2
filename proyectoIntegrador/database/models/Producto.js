@@ -15,12 +15,24 @@ module.exports= function(sequelize, DataTypes) {
         },
         nombreArchivoFoto: {
             type: DataTypes.STRING
-        }
+        },
+        createdAt: {
+            type: dataTypes.DATE,
+        },
+        updatedAt: {
+            type: dataTypes.DATE,
+        },
     };
     let config = {
         tableName: "productos",
         timestamps: false
     }
     const Producto = sequelize.define(alias, cols, config);
+    Producto.associate = function(models){
+        Producto.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "usuarioId",
+        });
+    };
     return Producto;
 }

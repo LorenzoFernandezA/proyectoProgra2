@@ -14,12 +14,24 @@ module.exports = function(sequelize, DataTypes){
         },
         password: {
             type: DataTypes.STRING
-        }
+        },
+        createdAt: {
+            type: dataTypes.DATE,
+        },
+        updatedAt: {
+            type: dataTypes.DATE,
+        },
     };
     let config = {
         tableName: "users",
         timestamps: false
     }
     const User = sequelize.define(alias, cols, config);
+    User.associate = function(models){
+        User.hasMany(models.Producto, {
+            as: "producto",
+            foreignKey: "usuarioId"
+        });
+    };
     return User;
 }
