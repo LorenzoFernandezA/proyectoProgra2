@@ -18,7 +18,7 @@ const userController = {
     },
 
     login:function(req,res){
-            const mail = req.body.gmail;
+            const mail = req.body.gmai;
             const recordarme = req.body.recordarme;
     
             db.User.findOne({where:{mail}
@@ -47,9 +47,9 @@ const userController = {
     },
         
     create:function(req,res){
-        const mail = req.body.gmail;
+        const mail = req.body.email;
         const password = req.body.password;
-        const usuario = req.body.usario;
+        const usuario = req.body.usuario;
     
         let passworEncriptada=bcrypt.hashSync(password,10);
     
@@ -57,22 +57,22 @@ const userController = {
         }).then(function(resultado){
             if(resultado){
                 return res.send("El usuario ya existe")
-            }else if (resultado == null){
-                return res.send("Compelta el campo")
             }else if (password.length < 3){
                 return res.send('Contraseña debe tener mas de 3 caracteres')
             }else{
                 db.User.create({
-                name: usuario,
+                usuario: usuario,
                 email: mail,
-                password: passworEncriptada})
-            return res.redirect("/")
+                contrasena: passworEncriptada})
+
+                return res.redirect("/")
                 }
+
         })},
-            logout:function(req,res){
-                req.session.destroy();
-                res.clearCookie('recordarme');
-                return res.redirect('/');
+    logout:function(req,res){
+            req.session.destroy();
+            res.clearCookie('recordarme');
+            return res.redirect('/');
             }
                 }
             

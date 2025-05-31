@@ -17,10 +17,10 @@ module.exports= function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         createdAt: {
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
         },
         updatedAt: {
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
         },
     };
     let config = {

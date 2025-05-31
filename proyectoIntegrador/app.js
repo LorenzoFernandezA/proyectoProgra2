@@ -31,7 +31,7 @@ app.use(session({
 
 app.use(function(req,res,next){
   if(req.session.userLogged){
-    read.locals.userLogged = req.session.userLogged;
+    res.locals.userLogged = req.session.userLogged;
   }
 
   return next();
@@ -40,7 +40,6 @@ app.use(function(req,res,next){
 
 app.use('/', indexRouter);
 app.use('/productos', productRouter);
-
 app.use(`/users`,userRouter);
 
 // catch 404 and forward to error handler

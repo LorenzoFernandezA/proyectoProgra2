@@ -6,20 +6,20 @@ module.exports = function(sequelize, DataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        usuario: {
             type: DataTypes.STRING
         },
         email: {
             type: DataTypes.STRING
         },
-        password: {
+        contrasena: {
             type: DataTypes.STRING
         },
         createdAt: {
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
         },
         updatedAt: {
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
         },
     };
     let config = {
