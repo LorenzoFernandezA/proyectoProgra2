@@ -1,5 +1,6 @@
 const dato = require('../db/modulo')
 const db = require('../database/models');
+const { create } = require('./userController');
 const productosDatabase = db.Producto;
 const op = db.Sequelize.Op;
 const productController = {
@@ -17,6 +18,9 @@ const productController = {
     },
 
     add: function (req, res) {
+        if(!req.session.user){
+            return res.redirect('/users/login');
+        }
         res.render('product-add', {});
     },
     
@@ -36,6 +40,9 @@ const productController = {
     },
 
     productAdd : function(req, res){
+        if(!req.session.user){
+            return res.redirect('/users/login');
+        }
         const productNew = req.body;
         if (productNew.imagen == ''){
             return res.send("Debe insertar la url de la imagen del producto agregado");
