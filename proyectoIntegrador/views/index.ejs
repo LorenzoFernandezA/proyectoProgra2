@@ -43,13 +43,17 @@
 				<section class="product-box">
 					<a href="/productos/detalle/<%=productos[i].id %>">
 						<figure class="product-box_image">
-							<img src="<%- productos[i].nombreArchivoFoto %>" >
+							<img src="/images/<%- productos[i].nombreArchivoFoto %>" >
 						</figure>
 						<article class="product-box_data">
 							<h2><%= productos[i].nombre %></h2>
 							<p><%= productos[i].descripcion %></p>
 						
 						</article>
+					</a>
+					
+					<a href="profile">
+
 					</a>
 				</section>
 			</div>

@@ -7,6 +7,9 @@ module.exports= function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
+        idUsuario: {
+            type: DataTypes.INTEGER.UNSIGNED
+        },
         nombre: {
             type: DataTypes.STRING
         },
@@ -31,7 +34,7 @@ module.exports= function(sequelize, DataTypes) {
     Producto.associate = function(models){
         Producto.belongsTo(models.User, {
             as: "user",
-            foreignKey: "usuarioId",
+            foreignKey: "idUsuario",
         });
     };
     return Producto;
