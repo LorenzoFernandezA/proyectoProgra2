@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        comentario: {
+        texto: {
             type: DataTypes.STRING
         },
         producto_id: {

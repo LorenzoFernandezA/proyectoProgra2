@@ -5,20 +5,24 @@ const productosDatabase = db.Producto;
 const op = db.Sequelize.Op;
 const productController = {
     producto: function (req, res) {
-        db.Producto.findByPk(req.params.id, {
-            include: [{ association: "user" },
-                    {association: "comentarios" }
-            ]})
-        
-        res.render('product', {producto: producto})
-    },
-        
+    db.Producto.findByPk(req.params.id, {
+        include: [
+            { association: "user" },
+            { association: "comentarios" }
+        ]
+    })
+    .then(function(producto) {
+        res.render('product', { producto: producto });
+    })
+},
+
     showFormAdd: function (req, res) {
         if (!req.session.user) {
             return res.redirect('/users/login');
         }
         return res.render('product-add');
     },
+
 
     add: function (req, res) {
         if(!req.session.user){
