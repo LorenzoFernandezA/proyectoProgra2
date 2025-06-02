@@ -87,7 +87,7 @@ const userController = {
 
     logout: function (req, res) {
         req.session.destroy();
-        res.clearCookie('recordarme');
+        res.clearCookie('recordar');
         return res.redirect('/');
     }
 }
