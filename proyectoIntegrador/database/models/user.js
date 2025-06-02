@@ -9,11 +9,14 @@ module.exports = function(sequelize, DataTypes){
         usuario: {
             type: DataTypes.STRING
         },
-        email: {
+        mail: {
             type: DataTypes.STRING
         },
         contrasena: {
             type: DataTypes.STRING
+        },
+        fecha:{
+            type:DataTypes.DATE
         },
         createdAt: {
             type: DataTypes.DATE,
