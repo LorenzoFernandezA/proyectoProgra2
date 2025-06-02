@@ -46,7 +46,7 @@
 					</a>
 				</div>
 			</div>
-<p>Bienvendido	<%= locals.userLogged.mail %></p>
+<p>Bienvenido	<%= locals.userLogged.mail %></p>
 			<button class="btn-toggle-navbar">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -58,8 +58,8 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/profile">
-						<%= info.nombre %> <i class="fas fa-user"></i>
+					<li><a href="/users/user">
+						<%= userLogged.mail %> <i class="fas fa-user"></i>
 						</a>
 					</li>
 					<li>

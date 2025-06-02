@@ -32,6 +32,8 @@ app.use(session({
 app.use(function(req,res,next){
   if(req.session.userLogged){
     res.locals.userLogged = req.session.userLogged;
+    console.log(res.locals);
+    
   }
 
   return next();

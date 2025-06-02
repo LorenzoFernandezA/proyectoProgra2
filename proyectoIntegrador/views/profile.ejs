@@ -23,11 +23,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="<%= info.fotoPerfil %>" alt="foto de perfil" class="foto-perfil">
+				<img src="<%= userLogged.usuario %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= info.nombre %> 
+					<h1 class="main-title"><%= userLogged.fecha %> 
 						<a href="profile-edit.html">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -35,11 +35,11 @@
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
-					<p>Email: <%= info.email %></p>
+					<p>Email: <%= userLogged.mail %></p>
 					<ul class="">
-						<li><%= info.productos %> productos</li>
-						<li><%= info.seguidores %> seguidores</li>
-						<li><%= info.comentarios %> comentarios</li>
+						<li></li>
+						<li></li>
+						<li></li>
 					</ul>
 				</div>
 			</div>

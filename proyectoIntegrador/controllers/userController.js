@@ -1,4 +1,5 @@
 
+const { Association } = require("sequelize");
 let db = require("../database/models");
 
 let bcrypt = require('bcryptjs');
@@ -6,8 +7,21 @@ let bcrypt = require('bcryptjs');
 const userController = {
 
     profile: function (req, res) {
-        db.User
-        res.render('profile', {});
+       if (req.session.userLogged==undefined){
+        return res.redirect('/users/formlogin')
+       }else{
+        usuarios.findByPk(req.params.id, {
+            include:[
+                {Association:'comentarios'},
+                {Association:'productos'}
+            ]
+        }).then(function(resultado){
+            res.render('profile', {informacion:resultado}
+                
+            ))
+       }
+    
+        res.render('profile', );
     },
 
     formLogin: function (req, res) {
@@ -22,10 +36,12 @@ const userController = {
         db.User.findOne({
             where: { mail }
         }).then(function (resultado) {
+            console.log(resultado);
+            
             if (resultado == null) {
                 return res.send("El usuario no existe");
             }
-            let chek = bcrypt.compareSync(password, password);
+            let chek = bcrypt.compareSync(password, resultado.contrasena);
             console.log(chek);
 
             if (chek) {

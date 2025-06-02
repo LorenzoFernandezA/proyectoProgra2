@@ -16,7 +16,7 @@
 </head>
 <body>
 	<!-- Header -->
-<% if (locals.user){%>
+<% if (locals.userLogged){%>
 	<%- include('./partials/headerLogueado.ejs')%>
 <%}else{%>
 	<%- include("./partials/header") %>
@@ -52,8 +52,8 @@
 						</article>
 					</a>
 					
-					<a href="">
-					<%= productos[i].user.idUsuario%>
+					<a href="/users/user %>">
+					<%= productos[i].user.mail%>
 					</a>
 				</section>
 			</div>
