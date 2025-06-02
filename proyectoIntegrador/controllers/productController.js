@@ -34,7 +34,7 @@ const productController = {
         productosDatabase.findAll({
             where: {
                 nombre: {[op.like]: `%${buscar}%`}},
-                include : [{association: "user"}],
+                include : [{association: "User"}],
         }).then(function(resultado){
             console.log(resultado);    
             return res.render('search-results', {producto: resultado});
