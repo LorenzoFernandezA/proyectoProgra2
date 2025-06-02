@@ -16,12 +16,9 @@ const userController = {
                 {Association:'productos'}
             ]
         }).then(function(resultado){
-            res.render('profile', {informacion:resultado}
-                
-            ))
-       }
-    
-        res.render('profile', );
+            res.render('profile', {informacion:resultado})
+            })
+        }
     },
 
     formLogin: function (req, res) {
