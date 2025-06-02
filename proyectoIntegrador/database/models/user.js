@@ -23,14 +23,14 @@ module.exports = function(sequelize, DataTypes){
         },
     };
     let config = {
-        tableName: "users",
+        tableName: "usuarios",
         timestamps: false
     }
     const User = sequelize.define(alias, cols, config);
     User.associate = function(models){
         User.hasMany(models.Producto, {
-            as: "producto",
-            foreignKey: "usuarioId"
+            as: "productos",
+            foreignKey: "idusuario"
         });
     };
     return User;

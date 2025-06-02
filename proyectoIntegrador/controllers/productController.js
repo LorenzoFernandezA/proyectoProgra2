@@ -28,14 +28,20 @@ const productController = {
     buscar: function (req, res) {
         const buscar= req.query.search;
 
+        console.log(buscar);
+        
+
         productosDatabase.findAll({
             where: {
                 nombre: {[op.like]: `%${buscar}%`}},
                 include : [{association: "user"}],
         }).then(function(resultado){
+            console.log(resultado);    
             return res.render('search-results', {producto: resultado});
         }).catch(function(error){
-                return res.send(error);
+            console.log(error);
+            
+            return res.send(error);
             })
     },
 

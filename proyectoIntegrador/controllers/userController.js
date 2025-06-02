@@ -1,8 +1,4 @@
-const usuario = require('../db/modulo')
-info = usuario.usuario
-const producto = usuario.productos
 
-const {where} = require("sequelize");
 let db = require("../database/models");
 
 let bcrypt = require ('bcryptjs');
@@ -10,7 +6,8 @@ let bcrypt = require ('bcryptjs');
 const userController = {
 
     profile: function(req, res) {
-        res.render('profile', {info, producto});
+        db.User
+        res.render('profile', {});
     },
 
     formLogin: function(req, res) {
@@ -43,7 +40,7 @@ const userController = {
     },
 
     register: function(req, res) {
-        res.render('register', {info, producto});
+        res.render('register', {});
     },
         
     create:function(req,res){
