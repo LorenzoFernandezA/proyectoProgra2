@@ -1,5 +1,4 @@
 
-const { Association } = require("sequelize");
 let db = require("../database/models");
 
 let bcrypt = require('bcryptjs');
@@ -7,13 +6,13 @@ let bcrypt = require('bcryptjs');
 const userController = {
 
     profile: function (req, res) {
-       if (req.session.userLogged==undefined){
+       if (req.session.userLogged == undefined) {
         return res.redirect('/users/formlogin')
        }else{
-        usuarios.findByPk(req.params.id, {
+        db.User.findByPk(req.params.id, {
             include:[
-                {Association:'comentarios'},
-                {Association:'productos'}
+                {association:'comentarios',},
+                {association:'productos'}
             ]
         }).then(function(resultado){
             res.render('profile', {informacion:resultado})
