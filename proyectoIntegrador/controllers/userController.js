@@ -40,17 +40,19 @@ const userController = {
             let chek = bcrypt.compareSync(password, resultado.contrasena);
             console.log(chek);
 
-            if (chek) {
+            if(chek) {
                 req.session.userLogged = resultado
-                res.redirect("/")
-            } else {
+                if (recordarme) {
+                    res.cookie("acordarse", resultado.id, { maxAge: 1000 * 60 * 60 });
+                }
+                return res.redirect("/")
+            }else {
                 res.send("La contraseña no coincide");
             }
         })
+      
 
-        if (recordarme) {
-            res.cookie("recordar", 'recordarme', { maxAge: 1000 * 60 * 5 })
-        }
+        
 
 
     },
@@ -86,9 +88,11 @@ const userController = {
 
     logout: function (req, res) {
         req.session.destroy();
-        res.clearCookie('recordar');
-        return res.redirect('/');
-    }
+        if (req.cookies.recordar) {
+            res.clearCookie("recordar");
+        }
+}
+
 }
 
 

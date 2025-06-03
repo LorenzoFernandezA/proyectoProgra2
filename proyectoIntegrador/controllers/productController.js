@@ -8,7 +8,7 @@ const productController = {
     db.Producto.findByPk(req.params.id, {
         include: [
             { association: "user" },
-            { association: "comentarios" }
+            { association: "comentarios", include: [{ association: "user" }] }
         ]
     })
     .then(function(producto) {
@@ -17,20 +17,12 @@ const productController = {
 },
 
     showFormAdd: function (req, res) {
-        if (!req.session.user) {
+        if (req.session.userLogged== undefined) {
             return res.redirect('/users/login');
         }
         return res.render('product-add');
     },
 
-
-    add: function (req, res) {
-        if(!req.session.user){
-            return res.redirect('/users/login');
-        }
-        res.render('product-add', {});
-    },
-    
     
     buscar: function (req, res) {
         const buscar= req.query.search;
@@ -53,35 +45,32 @@ const productController = {
     },
 
     productAdd : function(req, res){
-        if(!req.session.user){
-            return res.redirect('/users/login');
-        }
-        const productNew = req.body;
-        if (productNew.imagen == ''){
-            return res.send("Debe insertar la url de la imagen del producto agregado");
-        }else if (productNew.name == ""){
-            return res.send("Debe insertar el nombre del producto agregado");
-        }else if(productNew.descripcion == ""){
-            return res.send("Debe agregar una descripcion sobre el producto agregado");
-        }
-
-        const nuevoProducto = {
-            imagen: productNew.imagen,
-            nombre: productNew.nombre,
-            descripcion: productNew.descripcion,
-            usuarioId: req.session.user.id 
-        };
-
-        productosDatabase.create(nuevoProducto)
+        productosDatabase.create({
+            nombreArchivoFoto: req.body.imagen,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            idUsuario: req.session.userLogged.id 
+        })
         .then(function() {
-                return res.redirect('/products');
-            })
-            .catch(function(error) {
-                console.log(error);
-                return res.send('Error al crear el producto');
-            });
-
-        }
+            res.redirect('/');
+        }).catch(function(error) {
+            console.log(error);
+        })
     
+},
+    comentarioA:function(req, res){
+        
+        db.Comentario.create({
+            texto: req.body.comentario,
+            producto_id: req.params.id,
+            user_id: req.session.userLogged.id
+        })
+        .then(function() {
+            res.redirect(`/productos/detalle/${req.params.id}`);
+        }).catch(function(error) {
+            console.log(error);
+        })
+    }
 }
+
 module.exports = productController;

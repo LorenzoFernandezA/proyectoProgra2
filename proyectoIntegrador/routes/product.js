@@ -3,9 +3,10 @@ var router = express.Router();
 var productController= require('../controllers/productController');
 
 router.get('/detalle/:id?', productController.producto);
-router.get('/add', productController.add);
-router.post('/add',productController.productAdd);
+router.post('/add', productController.productAdd);
+router.get('/agregar',productController.showFormAdd);
 router.get('/buscar', productController.buscar);
+router.post("/comentario/:id", productController.comentarioA);
 
 
 module.exports = router;

@@ -31,7 +31,7 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="images/<%- producto.nombreArchivoFoto %>" alt="" class="product-detail-img">
+					<img src="/images/<%- producto.nombreArchivoFoto %>" alt="" class="product-detail-img">
 					<p class="product-detail-description"><%= producto.descripcion %></p>
 				</article>
 				<div class="col-12 col-lg-4">
@@ -43,7 +43,7 @@
 							<img src = "<%= producto.comentarios[i].imagen %>"> 
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/users/user">Usuario:<%= producto.comentarios[i].usuario %></a></strong>
+								<strong> <a href="/users/user/<%= producto.comentarios[i].user_id %>">Usuario:<%= producto.comentarios[i].user.usuario %></a></strong>
 								<%= producto.comentarios[i].texto %>
 							</div>
 						</article>
@@ -53,8 +53,8 @@
 						
 
 					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<form class="form" action="/productos/comentario/<%= producto.id%>" method="POST">
+						<input class="form-input" type="text" name="comentario" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 					<hr>
